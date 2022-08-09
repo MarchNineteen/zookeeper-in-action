@@ -8,7 +8,7 @@ public class ZkclientTest {
 
     @Before
     public void init() {
-        zkClient = new ZkClient("192.168.0.149:2181", 5000, 5000);
+        zkClient = new ZkClient("127.0.0.1:2181", 5000, 5000);
     }
 
     public void createTest() {

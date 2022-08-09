@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Controller
 public class MainControl implements InitializingBean {
-    @Value("${zk:192.168.0.149:2181}")
+    @Value("${zk:127.0.0.1:2181}")
     private String server;
     private ZkClient zkClient;
     private static final String rootPath = "/wyb-manger";

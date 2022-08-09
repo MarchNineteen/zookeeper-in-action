@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MasterResolve {
-    private String server = "192.168.0.149:2181";
+    private String server = "127.0.0.1:2181";
     private ZkClient zkClient;
     private static final String rootPath = "/wyb-master";
     private static final String servicePath = rootPath + "/service";

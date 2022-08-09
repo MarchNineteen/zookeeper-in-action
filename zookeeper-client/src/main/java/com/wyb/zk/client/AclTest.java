@@ -18,7 +18,7 @@ public class AclTest {
 
     @Before
     public void init() throws IOException {
-        zooKeeper = new ZooKeeper("192.168.0.149", 2181, event -> {
+        zooKeeper = new ZooKeeper("127.0.0.1", 2181, event -> {
             System.out.println(event);
         });
     }

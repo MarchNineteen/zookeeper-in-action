@@ -17,7 +17,7 @@ public class DataTest {
 
     @Before
     public void init() throws IOException {
-        String conn = "192.168.0.149:2181";
+        String conn = "127.0.0.1:2181";
         zooKeeper = new ZooKeeper(conn, 4000, new Watcher() {
             @Override
             public void process(WatchedEvent event) {
@@ -80,7 +80,7 @@ public class DataTest {
         List<ACL> list = new ArrayList<>();
         int perm = ZooDefs.Perms.ADMIN | ZooDefs.Perms.READ;//cdwra
         ACL acl = new ACL(perm, new Id("world", "anyone"));
-        ACL acl2 = new ACL(perm, new Id("ip", "192.168.0.149"));
+        ACL acl2 = new ACL(perm, new Id("ip", "127.0.0.1"));
         ACL acl3 = new ACL(perm, new Id("ip", "127.0.0.1"));
         list.add(acl);
         list.add(acl2);
